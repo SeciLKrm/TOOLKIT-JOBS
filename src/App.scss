@@ -1,0 +1,151 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+ background-color: #242424;
+ color: white;
+ min-height: 100vh;
+ font-weight: 400;
+}
+
+// LİSTELEME JOBLİST
+
+.job-count {
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.list-section{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 50px;
+  padding: 20px;
+}
+.job-card{
+  background-color: grey;
+  border-radius: 10px;
+  padding: 15px;
+
+}
+.head{
+  display: flex;
+   gap: 50px;
+   align-items: center;
+   
+   .letter{
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: plum;
+    border-radius: 5px;
+    display: grid;
+    place-items: center;
+    font-weight: 600;
+   }
+   .info{
+    display: flex;
+   flex-direction: column;
+   }
+}
+.body{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 30px;
+  margin-top: 30px;
+  
+  .field{
+    display: flex;
+    align-items: center;
+   gap: 10px;
+    img{
+      width: 30px;
+    }
+  }
+  .status{
+span{
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+.Devam{ background: rgb(177, 177, 4);}
+.Reddedildi{ background: orangered; }
+.Mülakat{ background: rgb(40, 165, 40);}
+  }
+}
+
+// HEADER
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  div{
+    display: flex;
+    gap: 15px;
+    .active{
+      color: lightseagreen;
+    text-shadow: 4px 4px 20px white  ;
+    }
+    a{
+      color: rgb(20, 136, 130);
+      text-decoration: none;
+      font-size: 18px;
+      &:hover{
+        text-shadow: 4px 4px 20px white ;
+        scale: 1.03;
+      }
+    }
+  }
+}
+
+//   İŞ EKLEME (ADDJOB)
+
+.add-sec{
+  max-width: 700px;
+  margin: 100px auto;
+  padding : 40px;
+  box-shadow: 10px 10px 70px #ff2b9e;
+  form{
+    margin-top: 40px;
+    flex-wrap: wrap;
+    display: flex;
+   justify-content: space-between;
+   gap: 20px;
+   align-items: flex-end;
+
+  }
+  .input-field{
+    display: flex;
+    flex-direction: column;
+    
+    input, select{
+      padding: 5px 10px;
+      margin-top: 5px;
+      border-radius: 3px  ;
+      border: none;
+    }
+  }
+  button{
+    width: 140px;
+    height: 40px;
+    padding: 10px 10px;
+    cursor: pointer;
+    background: #000000;
+    border-radius: 5px;
+    color: white;
+    margin-top: 30px ;
+    &:hover {
+      box-shadow: 2px 2px 10px pink;
+    }
+
+  }
+}
+
+// FİLTER 
+.filter-sec{
+  @extend .add-sec;
+ 
+}
